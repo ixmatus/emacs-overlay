@@ -110,6 +110,8 @@ let
               tree-sitter-tsx
               tree-sitter-typescript
               tree-sitter-yaml
+              tree-sitter-haskell
+              tree-sitter-nix
             ];
             tree-sitter-grammars = super.runCommandCC "tree-sitter-grammars" {}
               (super.lib.concatStringsSep "\n" (["mkdir -p $out/lib"] ++ (map linkCmd plugins)));
